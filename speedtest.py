@@ -15,9 +15,7 @@ def run_test():
     proc = subprocess.run('speedtest --accept-license --server-id=28910 --format=json',
                           shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
                           text=True)
-
     return json.loads(proc.stdout)
-
 
 def format_result(result):
     return {
