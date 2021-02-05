@@ -12,7 +12,7 @@ import pprint
 # sudo apt-get install speedtest
 
 def run_test():
-    proc = subprocess.run('speedtest --server-id=28910 --format=json',
+    proc = subprocess.run('speedtest --accept-license --server-id=28910 --format=json',
                           shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
                           text=True)
 
