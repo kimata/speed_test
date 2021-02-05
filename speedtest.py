@@ -27,7 +27,4 @@ def format_result(result):
         'download': int(result['download']['bandwidth'] * 8 / (1000*1000)),
     }
 
-
-print(format_result(run_test()))
-
-
+print(json.dumps(format_result(run_test())))
