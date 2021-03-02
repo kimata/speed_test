@@ -19,8 +19,8 @@ def run_test():
 
 def format_result(result):
     return {
-        'latency': result['ping']['latency'],
-        'jitter': result['ping']['jitter'],
+        'latency': float(result['ping']['latency']),
+        'jitter': float(result['ping']['jitter']),
         'upload': int(result['upload']['bandwidth'] * 8 / (1000*1000)),
         'download': int(result['download']['bandwidth'] * 8 / (1000*1000)),
     }
